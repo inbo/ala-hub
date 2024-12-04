@@ -31,8 +31,8 @@ ext {
 repositories {
     mavenLocal()
     maven {
-        name 'Biocache-hubs VBP package registry'
-        url "https://maven.pkg.github.com/katya-shaleninova/biocache-hubs-vbp"
+//        name 'Biocache-hubs VBP package registry'
+        url "https://maven.pkg.github.com/inbo/biocache-hubs"
     }
     maven { url "https://nexus.ala.org.au/content/groups/public/" }
     maven { url "https://repo.grails.org/grails/core" }
