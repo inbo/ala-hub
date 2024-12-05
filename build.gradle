@@ -33,6 +33,10 @@ repositories {
     maven {
 //        name 'Biocache-hubs VBP package registry'
         url "https://maven.pkg.github.com/inbo/biocache-hubs"
+        credentials {
+            username = System.getenv('GITHUB_USERNAME')
+            password = System.getenv('GITHUB_TOKEN')
+        }
     }
     maven { url "https://nexus.ala.org.au/content/groups/public/" }
     maven { url "https://repo.grails.org/grails/core" }
@@ -141,7 +145,7 @@ dependencies {
     implementation "au.org.ala.plugins.grails:downloads-plugin:5.0.0"
 
     if (!inplace) {
-        implementation "au.org.ala.plugins.grails:biocache-hubs:7.1.1-vbp-1", noCache
+        implementation "au.org.ala.plugins.grails:biocache-hubs:7.1.1", noCache
     }
 }
 
